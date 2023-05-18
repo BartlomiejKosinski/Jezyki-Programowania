@@ -52,7 +52,7 @@ a:hover{
 section{
     width: 100%;
     padding: 6rem;
-    height: 100vh;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,16 +97,27 @@ img{
 
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: var(--dark);
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: var(--text);
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #aaaaaaaa;
-  }
+}
+
+::-webkit-scrollbar-track {
+background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+background: var(--text);
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #aaaaaaaa;
+}
+
+@media (max-width: 1440px) {
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: fit-content;
+        padding: 2rem;
+    }
+}
